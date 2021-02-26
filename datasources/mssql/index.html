@@ -9,6 +9,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.mindsdb.com/datasources/mssql/">
+      
       <link rel="shortcut icon" href="../../assets/mdb_logo.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
     
@@ -90,7 +92,7 @@
   
   <header class="md-header" data-md-component="header">
     <nav class="md-header-nav md-grid" aria-label="Header">
-      <a href="../.." title="MindsDB Documentation" class="md-header-nav__button md-logo" aria-label="MindsDB Documentation">
+      <a href="https://docs.mindsdb.com" title="MindsDB Documentation" class="md-header-nav__button md-logo" aria-label="MindsDB Documentation">
         
   <img src="../../assets/mdb_logo_w.svg" alt="logo">
 
@@ -190,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MindsDB Documentation" class="md-nav__button md-logo" aria-label="MindsDB Documentation">
+    <a href="https://docs.mindsdb.com" title="MindsDB Documentation" class="md-nav__button md-logo" aria-label="MindsDB Documentation">
       
   <img src="../../assets/mdb_logo_w.svg" alt="logo">
 
@@ -1650,7 +1652,7 @@
        <span class="nt">&quot;mysql&quot;</span><span class="p">:</span> <span class="p">{</span>
            <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
            <span class="nt">&quot;database&quot;</span><span class="p">:</span> <span class="s2">&quot;mindsdb&quot;</span><span class="p">,</span>
-           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
            <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47335&quot;</span><span class="p">,</span>
            <span class="nt">&quot;ssl&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
            <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span>
@@ -1688,7 +1690,7 @@
 </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['mysql'] -- This key is used for database integrations that work through MySQL protocol. The required keys are:<ul>
 <li>user(default root).</li>
-<li>password(default empty).</li>
+<li>password(default 123456) - Required to have a password, since Microsoft SQL will use default user pass. This is the password for MindsDB MySQL API.</li>
 <li>database - The name of the server that mindsdb will start.</li>
 <li>ssl(default true) -- Use SSL true/false.</li>
 <li>host(default 127.0.0.1).</li>
@@ -1735,6 +1737,10 @@ Or, <code>openquery</code>:
               
                 
 
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>var disqus_config=function(){this.page.url="https://docs.mindsdb.com/datasources/mssql/",this.page.identifier="/datasources/mssql/"};window.addEventListener("load",function(){var e=document,i=e.createElement("script");i.src="//docs-mindsdb-com.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)})</script>
 
               
             </article>

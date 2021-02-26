@@ -9,6 +9,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.mindsdb.com/model/mariadb/">
+      
       <link rel="shortcut icon" href="../../assets/mdb_logo.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
     
@@ -90,7 +92,7 @@
   
   <header class="md-header" data-md-component="header">
     <nav class="md-header-nav md-grid" aria-label="Header">
-      <a href="../.." title="MindsDB Documentation" class="md-header-nav__button md-logo" aria-label="MindsDB Documentation">
+      <a href="https://docs.mindsdb.com" title="MindsDB Documentation" class="md-header-nav__button md-logo" aria-label="MindsDB Documentation">
         
   <img src="../../assets/mdb_logo_w.svg" alt="logo">
 
@@ -190,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MindsDB Documentation" class="md-nav__button md-logo" aria-label="MindsDB Documentation">
+    <a href="https://docs.mindsdb.com" title="MindsDB Documentation" class="md-nav__button md-logo" aria-label="MindsDB Documentation">
       
   <img src="../../assets/mdb_logo_w.svg" alt="logo">
 
@@ -1547,6 +1549,10 @@
 <p class="admonition-title">How to create the mindsb.predictors table</p>
 <p>Note that after connecting <a href="/datasources/mariadb/#mysql-client">MindsDB and MariaDB</a>, on start, the MindsDB server will automatically create the mindsdb database and add the predictors table.</p>
 </div>
+<div class="admonition info">
+<p class="admonition-title">Prerequisite</p>
+<p>Don't forget to enable CONNECT Storage Engine as explained in <a href="/datasources/mariadb/#prerequisite">connect your data section</a>.</p>
+</div>
 <p>The <code>INSERT</code> query for training new model is quite simple, e.g.:</p>
 <p><div class="highlight"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">mindsdb</span><span class="p">.</span><span class="n">predictors</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">predict</span><span class="p">,</span> <span class="n">select_data_query</span><span class="p">,</span> <span class="n">training_options</span><span class="p">)</span>
 <span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;model_name&#39;</span><span class="p">,</span> <span class="s1">&#39;target_variable&#39;</span><span class="p">,</span> <span class="s1">&#39;SELECT * FROM table_name&#39;</span><span class="p">);</span>
@@ -1581,6 +1587,10 @@ The values provided in the <code>INSERT</code> query are:</p>
               
                 
 
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>var disqus_config=function(){this.page.url="https://docs.mindsdb.com/model/mariadb/",this.page.identifier="/model/mariadb/"};window.addEventListener("load",function(){var e=document,i=e.createElement("script");i.src="//docs-mindsdb-com.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)})</script>
 
               
             </article>

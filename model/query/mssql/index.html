@@ -9,6 +9,8 @@
       
       
       
+        <link rel="canonical" href="https://docs.mindsdb.com/model/query/mssql/">
+      
       <link rel="shortcut icon" href="../../../assets/mdb_logo.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
     
@@ -90,7 +92,7 @@
   
   <header class="md-header" data-md-component="header">
     <nav class="md-header-nav md-grid" aria-label="Header">
-      <a href="../../.." title="MindsDB Documentation" class="md-header-nav__button md-logo" aria-label="MindsDB Documentation">
+      <a href="https://docs.mindsdb.com" title="MindsDB Documentation" class="md-header-nav__button md-logo" aria-label="MindsDB Documentation">
         
   <img src="../../../assets/mdb_logo_w.svg" alt="logo">
 
@@ -190,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="MindsDB Documentation" class="md-nav__button md-logo" aria-label="MindsDB Documentation">
+    <a href="https://docs.mindsdb.com" title="MindsDB Documentation" class="md-nav__button md-logo" aria-label="MindsDB Documentation">
       
   <img src="../../../assets/mdb_logo_w.svg" alt="logo">
 
@@ -1512,7 +1514,12 @@
                 
                 
                 <h1 id="query-the-model-from-microsoft-sql-server">Query the model from Microsoft SQL Server</h1>
-<p>This section assumes that you have trained a new model using <a href="/model/mssql/">SQL client</a> or <a href="/model/train/">MindsDB Studio</a>. To query the model, you will need to <code>SELECT</code> from the model table:</p>
+<p>This section assumes that you have trained a new model using <a href="/model/mssql/">SQL client</a> or <a href="/model/train/">MindsDB Studio</a>. </p>
+<div class="admonition info">
+<p class="admonition-title">Prerequisite</p>
+<p>Don't forget to install the prerequisites as explained in <a href="/datasources/mssql/#prerequisite">connect your data section</a>.</p>
+</div>
+<p>To query the model, you will need to <code>SELECT</code> from the model table:</p>
 <div class="highlight"><pre><span></span><code><span class="k">exec</span><span class="p">(</span><span class="s1">&#39;SELECT &lt;target_variable&gt; AS predicted,</span>
 <span class="s1">             &lt;target_variable_confidence&gt; AS confidence,</span>
 <span class="s1">             &lt;target_variable_explain&gt; AS info </span>
@@ -1561,6 +1568,10 @@ You should get a response from MindsDB similar to:</p>
               
                 
 
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>var disqus_config=function(){this.page.url="https://docs.mindsdb.com/model/query/mssql/",this.page.identifier="/model/query/mssql/"};window.addEventListener("load",function(){var e=document,i=e.createElement("script");i.src="//docs-mindsdb-com.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)})</script>
 
               
             </article>
