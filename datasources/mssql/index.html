@@ -1712,82 +1712,9 @@
 <h2 id="mssql-client">MSSQL client</h2>
 <div class="admonition info">
 <p class="admonition-title">How to extend MindsDB configuration</p>
-<p>Our suggestion is to always use <a href="/datasources/mssql/#mindsdb-studio">MindsDB Studio</a> to connect MindsDB to your database. If you still want to extend the configuration without using MindsDB Studio follow the steps below.</p>
+<p>Our suggestion is to always use <a href="/datasources/mssql/#mindsdb-studio">MindsDB Studio</a> to connect MindsDB to your database. If you still want to extend the configuration without using MindsDB Studio follow the <a href="/datasources/configuration/#sql-server-configuration">configuration example</a>.</p>
 </div>
-<p>Before using mssql-cli or any SQL client to connect MindsDB and Microsoft SQL Server, you will need to add additional configuration before starting MindsDB Server. Create a new <code>config.json</code> file. Expand the example below to preview the configuration example.</p>
-<details class="success">
-   <summary> Configuration example</summary> 
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-   <span class="nt">&quot;api&quot;</span><span class="p">:</span> <span class="p">{</span>
-       <span class="nt">&quot;http&quot;</span><span class="p">:</span> <span class="p">{</span>
-           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47334&quot;</span>
-       <span class="p">},</span>
-       <span class="nt">&quot;mysql&quot;</span><span class="p">:</span> <span class="p">{</span>
-           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-           <span class="nt">&quot;database&quot;</span><span class="p">:</span> <span class="s2">&quot;mindsdb&quot;</span><span class="p">,</span>
-           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
-           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47335&quot;</span><span class="p">,</span>
-           <span class="nt">&quot;ssl&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-           <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span>
-       <span class="p">}</span>
-   <span class="p">},</span>
-   <span class="nt">&quot;config_version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.4&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;debug&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-   <span class="nt">&quot;integrations&quot;</span><span class="p">:</span> <span class="p">{</span>
-       <span class="nt">&quot;default_mariadb&quot;</span><span class="p">:</span> <span class="p">{</span>
-           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
-           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;pass&quot;</span><span class="p">,</span>
-           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">1433</span><span class="p">,</span>
-           <span class="nt">&quot;publish&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;mssql&quot;</span><span class="p">,</span>
-           <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;sa&quot;</span>
-       <span class="p">}</span>
-   <span class="p">},</span>
-   <span class="nt">&quot;log&quot;</span><span class="p">:</span> <span class="p">{</span>
-       <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="p">{</span>
-           <span class="nt">&quot;console&quot;</span><span class="p">:</span> <span class="s2">&quot;DEBUG&quot;</span><span class="p">,</span>
-           <span class="nt">&quot;file&quot;</span><span class="p">:</span> <span class="s2">&quot;INFO&quot;</span>
-       <span class="p">}</span>
-   <span class="p">},</span>
-   <span class="nt">&quot;storage_dir&quot;</span><span class="p">:</span> <span class="s2">&quot;/storage&quot;</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-
-<p>All of the options that should be added to the <code>config.json</code> file are:</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['http'] -- This key is used for starting the MindsDB HTTP server by providing:<ul>
-<li>host(default 127.0.0.1) - The mindsDB server address.</li>
-<li>port(default 47334) - The mindsDB server port.</li>
-</ul>
-</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['mysql'] -- This key is used for database integrations that work through MySQL protocol. The required keys are:<ul>
-<li>user(default root).</li>
-<li>password(default 123456) - Required to have a password, since Microsoft SQL will use default user pass. This is the password for MindsDB MySQL API.</li>
-<li>database - The name of the server that mindsdb will start.</li>
-<li>ssl(default true) -- Use SSL true/false.</li>
-<li>host(default 127.0.0.1).</li>
-<li>port(default 47335).</li>
-</ul>
-</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> integrations['default_mssql'] -- This key specifies the integration type, in this case <code>default_mssql</code>. The required keys are:<ul>
-<li>user(default sa) - The Microsoft SQL Server user name.</li>
-<li>host(default 127.0.0.1) - Connect to the Microsoft SQL Server on the given host.</li>
-<li>password - The password of the Microsoft SQL Server user.</li>
-<li>type - Integration type(mariadb, postgresql, mysql, clickhouse, mongodb).</li>
-<li>port(default 1433) - The TCP/IP port number to use for the connection.</li>
-<li>publish(true|false) - Enable Microsoft SQL Server integration.</li>
-</ul>
-</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> log['level'] -- The logging configuration(optional):<ul>
-<li>console - "INFO", "DEBUG", "ERROR".</li>
-<li>file - Location of the log file.</li>
-</ul>
-</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> storage_dir -- The directory where mindsDB will store models and configuration.</li>
-</ul>
-<p>After creating the <code>config.json</code> file, you will need to start MindsDB and provide the path to the newly created <code>config.json</code>:</p>
+<p>After adding the required configuration to the <code>config.json</code> file, you will need to start MindsDB and provide the path to the newly created <code>config.json</code>:</p>
 <div class="highlight"><pre><span></span><code>python3 -m mindsdb --api=http,mysql --config=config.json
 </code></pre></div>
 <p>The <code>--api</code> parameter specifies the type of API to use -- in this case HTTP and MySQL. The <code>--config</code> parameter specifies the location of the configuration file.</p>

@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://docs.mindsdb.com/datasources/postgresql/">
+        <link rel="canonical" href="https://docs.mindsdb.com/datasources/configuration/">
       
       <link rel="shortcut icon" href="../../assets/mdb_logo.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
     
     
       
-        <title>PostgreSQL - MindsDB Documentation</title>
+        <title>Configuration - MindsDB Documentation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#connect-to-postgresql-database" class="md-skip">
+        <a href="#extending-default-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
             </span>
             <span class="md-header-nav__topic md-ellipsis">
               
-                PostgreSQL
+                Configuration
               
             </span>
           </div>
@@ -333,14 +333,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
       
       <label class="md-nav__link" for="nav-2">
         Connect your data
@@ -369,83 +367,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          PostgreSQL
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
         PostgreSQL
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisite" class="md-nav__link">
-    Prerequisite
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mindsdb-studio" class="md-nav__link">
-    MindsDB Studio
-  </a>
-  
-    <nav class="md-nav" aria-label="MindsDB Studio">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connect-to-database" class="md-nav__link">
-    Connect to database
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-new-datasource" class="md-nav__link">
-    Create new Datasource
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#psql-client" class="md-nav__link">
-    PSQL client
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1555,8 +1481,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1565,43 +1489,57 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisite" class="md-nav__link">
-    Prerequisite
+  <a href="#extending-default-configuration" class="md-nav__link">
+    Extending default configuration
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mindsdb-studio" class="md-nav__link">
-    MindsDB Studio
-  </a>
-  
-    <nav class="md-nav" aria-label="MindsDB Studio">
+    <nav class="md-nav" aria-label="Extending default configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connect-to-database" class="md-nav__link">
-    Connect to database
+  <a href="#postgresql-configuration" class="md-nav__link">
+    PostgreSQL configuration
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-new-datasource" class="md-nav__link">
-    Create new Datasource
+  <a href="#mysql-configuration" class="md-nav__link">
+    MySQL configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mariadb-configuration" class="md-nav__link">
+    MariaDB configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clickhouse-configuration" class="md-nav__link">
+    Clickhouse configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-server-configuration" class="md-nav__link">
+    SQL Server configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-configuration" class="md-nav__link">
+    MongoDB Configuration
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#psql-client" class="md-nav__link">
-    PSQL client
-  </a>
   
 </li>
       
@@ -1617,79 +1555,419 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mindsdb/mindsdb/edit/master/docs/datasources/postgresql.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mindsdb/mindsdb/edit/master/docs/datasources/configuration.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="connect-to-postgresql-database">Connect to PostgreSQL database</h1>
-<p>Connecting MindsDB to your PostgreSQL database can be done in two ways:</p>
-<ul>
-<li>Using <a href="#mindsdb-studio">MindsDB Studio</a>.</li>
-<li>Using <a href="#psql-client">psql client</a>.</li>
-</ul>
-<h2 id="prerequisite">Prerequisite</h2>
-<p>To connect to your PostgreSQL Server from MindsDB, you will need to install the MySQL foreign data wrapper for PostgreSQL.</p>
-<div class="admonition tip">
-<p class="admonition-title">How to install the MySQL foreign data wrapper</p>
-<ul>
-<li>Please check the mysql_fdw <a href="https://github.com/EnterpriseDB/mysql_fdw#installation" target="_blank">documentation</a>.</li>
-<li>Stackoverflow <a href="https://stackoverflow.com/questions/24683035/setup-mysql-foreign-data-wrapper-in-postgresql" target="_blank">answers</a>.</li>
-</ul>
-</div>
-<h2 id="mindsdb-studio">MindsDB Studio</h2>
-<p>Using MindsDB Studio, you can connect to the PostgreSQL database with a few clicks.</p>
-<h4 id="connect-to-database">Connect to database</h4>
-<ol>
-<li>From the left navigation menu, select Database Integration.</li>
-<li>Click on the <code>ADD DATABASE</code> button.</li>
-<li>In the <code>Connect to Database</code> modal:<ol>
-<li>Select PostgreSQL as the Supported Database.</li>
-<li>Add the Database name.</li>
-<li>Add the Hostname.</li>
-<li>Add Port.</li>
-<li>Add PostgreSQL user.</li>
-<li>Add Password for PostgreSQL user.</li>
-<li>Click on <code>CONNECT</code>.</li>
-</ol>
-</li>
-</ol>
-<p><img alt="Connect to PostgreSQL" src="/assets/data/postgresql.gif" /></p>
-<h4 id="create-new-datasource">Create new Datasource</h4>
-<ol>
-<li>Click on the <code>NEW DATASOURCE</code> button.</li>
-<li>In the <code>Datasource from DB integration</code> modal:<ol>
-<li>Add Datasource Name.</li>
-<li>Add Database name.</li>
-<li>Add SELECT Query (e.g. SELECT * FROM my_database)</li>
-<li>Click on <code>CREATE</code>.</li>
-</ol>
-</li>
-</ol>
-<p><img alt="Create PostgreSQL Datasource" src="/assets/data/postgresql-ds.gif" /></p>
-<div class="admonition success">
-<p class="admonition-title">That's it<img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f389.png" title=":tada:" /> <img alt="🏆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f3c6.png" title=":trophy:" />  <img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f4bb.png" title=":computer:" /></p>
-<p>You have successfully connected to PostgreSQL from MindsDB Studio. The next step is to train the <a href="/model/train">Machine Learning model</a>.</p>
-</div>
-<h2 id="psql-client">PSQL client</h2>
+                  <h1>Configuration</h1>
+                
+                <h2 id="extending-default-configuration">Extending default configuration</h2>
+<p>Before using SQL clients to connect MindsDB and databases, you will need to create additional configuration before starting MindsDB Server. Create a new <code>config.json</code> file and send the file location as parameteter to <code>--config</code> before starting the server. Check the examples below to preview the configuration required for each database.</p>
 <div class="admonition info">
-<p class="admonition-title">How to extend MindsDB configuration</p>
-<p>Our suggestion is to always use <a href="/datasources/postgresql/#mindsdb-studio">MindsDB Studio</a> to connect MindsDB to your database. If you still want to extend the configuration without using MindsDB Studio follow <a href="/datasources/configuration/#postgresql-configuration">configuration example</a>.</p>
+<p class="admonition-title">Required vs Optional</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> means required config key</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> means optional config key</li>
+</ul>
 </div>
-<p>After creating the required configuration, you will need to start MindsDB and provide the path to the newly created <code>config.json</code>:</p>
-<div class="highlight"><pre><span></span><code>python3 -m mindsdb --api=http,mysql --config=config.json
+<h3 id="postgresql-configuration">PostgreSQL configuration</h3>
+<details class="success">
+   <summary> config.json example (click to expand)</summary> 
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+   <span class="nt">&quot;api&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;http&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47334&quot;</span>
+       <span class="p">},</span>
+       <span class="nt">&quot;mysql&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;pass&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47335&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;config_version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.4&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;debug&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+   <span class="nt">&quot;integrations&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;default_postgres&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;database&quot;</span><span class="p">:</span> <span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;publish&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">5432</span><span class="p">,</span>
+           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;postgres&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;log&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;console&quot;</span><span class="p">:</span> <span class="s2">&quot;DEBUG&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;file&quot;</span><span class="p">:</span> <span class="s2">&quot;INFO&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;storage_dir&quot;</span><span class="p">:</span> <span class="s2">&quot;/storage&quot;</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>The <code>--api</code> parameter specifies the type of API to use, in this case HTTP and MySQL. The <code>--config</code> parameter specifies the location of the configuration file.</p>
-<p><img alt="Start MindsDB with config" src="/assets/data/start-config.gif" /></p>
-<p>If MindsDB is successfully connected to your PostgreSQL database, it will create a new schema <code>mindsdb</code> and new table <code>predictors</code>.
-After starting the server, you can run a <code>SELECT</code> query from your psql-client to make sure integration has been successful.</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">mindsdb</span><span class="p">.</span><span class="n">predictors</span><span class="p">;</span>
+</details>
+
+<p>All of the options that should be added to the <code>config.json</code> file are:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['http] -- This key is used for starting the MindsDB http server by providing:<ul>
+<li>host(default 127.0.0.1) - The mindsDB server address.</li>
+<li>port(default 47334) - The mindsDB server port.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['mysql'] -- This key is used for database integrations that works through MySQL protocol. The required keys are:<ul>
+<li>user(default root).</li>
+<li>password(default empty).</li>
+<li>host(default 127.0.0.1).</li>
+<li>port(default 47335).</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> integrations['default_postgres'] -- This key specifies the integration type, in this case <code>default_postgres</code>. The required keys are:<ul>
+<li>user(default postgres) - The Postgres user name.</li>
+<li>host(default 127.0.0.1) - Connect to the PostgreSQL server on the given host.</li>
+<li>password - The password of the Postgres account.</li>
+<li>type - Integration type(mariadb, postgresql, mysql, clickhouse, mongodb).</li>
+<li>port(default 5432) - The TCP/IP port number to use for the connection.</li>
+<li>publish(true|false) - Enable PostgreSQL integration.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> log['level'] -- The logging configuration(not required):<ul>
+<li>console - "INFO", "DEBUG", "ERROR".</li>
+<li>file - Location of the log file.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> storage_dir -- The directory where mindsDB will store models and configuration.</li>
+</ul>
+<h3 id="mysql-configuration">MySQL configuration</h3>
+<details class="success">
+   <summary> config.json example (click to expand)</summary> 
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+   <span class="nt">&quot;api&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;http&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47334&quot;</span>
+       <span class="p">},</span>
+       <span class="nt">&quot;mysql&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;pass&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47335&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;config_version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.4&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;debug&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+   <span class="nt">&quot;integrations&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;default_mysql&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;publish&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">3307</span><span class="p">,</span>
+           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;mysql&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;log&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;console&quot;</span><span class="p">:</span> <span class="s2">&quot;DEBUG&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;file&quot;</span><span class="p">:</span> <span class="s2">&quot;INFO&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;storage_dir&quot;</span><span class="p">:</span> <span class="s2">&quot;/storage&quot;</span>
+<span class="p">}</span>
 </code></pre></div>
-<p><img alt="SELECT from MindsDB predictors table" src="/assets/data/psql-select.gif" /></p>
-<div class="admonition success">
-<p class="admonition-title">That's it <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f389.png" title=":tada:" /> <img alt="🏆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f3c6.png" title=":trophy:" />  <img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f4bb.png" title=":computer:" /></p>
-<p>You have successfully connected MindsDB Server and PostgreSQL. The next step is to <a href="/model/postgresql">train the Machine Learning model</a>.</p>
-</div>
+</details>
+
+<p>All of the avaiable settings that should be added to the <code>config.json</code> file are:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['http'] -- This key is used for starting the MindsDB HTTP server by providing:<ul>
+<li>host(default 127.0.0.1) - The mindsDB server address.</li>
+<li>port(default 47334) - The mindsDB server port.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['mysql'] -- This key is used for database integrations that work through MySQL protocol. The required keys are:<ul>
+<li>user(default root).</li>
+<li>password(default empty).</li>
+<li>host(default 127.0.0.1).</li>
+<li>port(default 47335).</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> integrations['default_mysql'] -- This key specifies the integration type -- in this case <code>default_mysql</code>. The required keys are:<ul>
+<li>user(default root) - The MySQL user name.</li>
+<li>host(default 127.0.0.1, don't use localhost here) - Connect to the MySQL server on the given host.</li>
+<li>password - The password of the MySQL account.</li>
+<li>type - Integration type(mariadb, postgresql, mysql, clickhouse, mongodb).</li>
+<li>port(default 3306) - The TCP/IP port number to use for the connection.</li>
+<li>publish(true|false) - Enable MySQL integration.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> log['level'] -- The logging configuration(optional):<ul>
+<li>console - "INFO", "DEBUG", "ERROR".</li>
+<li>file - Location of the log file.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> storage_dir -- The directory where mindsdb will store models and configuration.</li>
+</ul>
+<h3 id="mariadb-configuration">MariaDB configuration</h3>
+<details class="success">
+   <summary> config.json example (click to expand)</summary> 
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+   <span class="nt">&quot;api&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;http&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47334&quot;</span>
+       <span class="p">},</span>
+       <span class="nt">&quot;mysql&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;pass&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47335&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;config_version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.4&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;debug&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+   <span class="nt">&quot;integrations&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;default_mariadb&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;pass&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">3306</span><span class="p">,</span>
+           <span class="nt">&quot;publish&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;mariadb&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;log&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;console&quot;</span><span class="p">:</span> <span class="s2">&quot;DEBUG&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;file&quot;</span><span class="p">:</span> <span class="s2">&quot;INFO&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;storage_dir&quot;</span><span class="p">:</span> <span class="s2">&quot;/storage&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+
+<p>All of the options that should be added to the <code>config.json</code> file are:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['http'] -- This key is used for starting the MindsDB HTTP server by providing:<ul>
+<li>host(default 127.0.0.1) - The mindsDB server address.</li>
+<li>port(default 47334) - The mindsDB server port.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['mysql'] -- This key is used for database integrations that work through MySQL protocol. The required keys are:<ul>
+<li>user(default root).</li>
+<li>password(default empty).</li>
+<li>host(default 127.0.0.1).</li>
+<li>port(default 47335).</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> integrations['default_mariadb'] -- This key specifies the integration type, in this case <code>default_mariadb</code>. The required keys are:<ul>
+<li>user(default root) - The MariaDB user name.</li>
+<li>host(default 127.0.0.1) - Connect to the MariaDB server on the given host.</li>
+<li>password - The password of the MariaDB account.</li>
+<li>type - Integration type(mariadb, postgresql, mysql, clickhouse, mongodb).</li>
+<li>port(default 3306) - The TCP/IP port number to use for the connection.</li>
+<li>publish(true|false) - Enable MariaDB integration.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> log['level'] -- The logging configuration(optional):<ul>
+<li>console - "INFO", "DEBUG", "ERROR".</li>
+<li>file - Location of the log file.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> storage_dir -- The directory where mindsDB will store models and configuration.</li>
+</ul>
+<h3 id="clickhouse-configuration">Clickhouse configuration</h3>
+<details class="success">
+   <summary> config.json example (click to expand)</summary> 
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+   <span class="nt">&quot;api&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;http&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47334&quot;</span>
+       <span class="p">},</span>
+       <span class="nt">&quot;mysql&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;pass&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47335&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;config_version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.4&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;debug&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+   <span class="nt">&quot;integrations&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;default_clickhouse&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;database&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;published&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;clickhouse&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;pass&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8123</span><span class="p">,</span>
+           <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;log&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;console&quot;</span><span class="p">:</span> <span class="s2">&quot;DEBUG&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;file&quot;</span><span class="p">:</span> <span class="s2">&quot;INFO&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;storage_dir&quot;</span><span class="p">:</span> <span class="s2">&quot;/storage&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+
+<p>All of the options that should be added to the <code>config.json</code> file are:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['http] -- This key is used for starting the MindsDB http server by providing:<ul>
+<li>host(default 127.0.0.1) - The mindsDB server address.</li>
+<li>port(default 47334) - The mindsDB server port.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['mysql'] -- This key is used for database integrations that work through MySQL protocol. The required keys are:<ul>
+<li>user(default root).</li>
+<li>password(default empty).</li>
+<li>host(default 127.0.0.1).</li>
+<li>port(default 47335).</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> integrations['default_clickhouse'] -- This key specifies the integration type in this case <code>default_clickhouse</code>. The required keys are:<ul>
+<li>user(default is default user) - The ClickHouse user name.</li>
+<li>host(default 127.0.0.1) - Connect to the ClickHouse server on the given host.</li>
+<li>password - The password of the ClickHouse user.</li>
+<li>type - Integration type(mariadb, postgresql, mysql, clickhouse, mongodb).</li>
+<li>port(default 8123) - The TCP/IP port number to use for the connection.</li>
+<li>publish(true|false) - Enable ClickHouse integration.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> log['level'] -- The logging configuration(not required):<ul>
+<li>console - "INFO", "DEBUG", "ERROR".</li>
+<li>file - Location of the log file.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> storage_dir -- The directory where mindsDB will store models and configuration.</li>
+</ul>
+<h3 id="sql-server-configuration">SQL Server configuration</h3>
+<details class="success">
+   <summary>config.json example (click to expand)</summary> 
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+   <span class="nt">&quot;api&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;http&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47334&quot;</span>
+       <span class="p">},</span>
+       <span class="nt">&quot;mysql&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;database&quot;</span><span class="p">:</span> <span class="s2">&quot;mindsdb&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47335&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;ssl&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+           <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;root&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;config_version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.4&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;debug&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+   <span class="nt">&quot;integrations&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;default_mssql&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;pass&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">1433</span><span class="p">,</span>
+           <span class="nt">&quot;publish&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;mssql&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;sa&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;log&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;console&quot;</span><span class="p">:</span> <span class="s2">&quot;DEBUG&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;file&quot;</span><span class="p">:</span> <span class="s2">&quot;INFO&quot;</span>
+       <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="nt">&quot;storage_dir&quot;</span><span class="p">:</span> <span class="s2">&quot;/storage&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+
+<p>All of the options that should be added to the <code>config.json</code> file are:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['http'] -- This key is used for starting the MindsDB HTTP server by providing:<ul>
+<li>host(default 127.0.0.1) - The mindsDB server address.</li>
+<li>port(default 47334) - The mindsDB server port.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['mysql'] -- This key is used for database integrations that work through MySQL protocol. The required keys are:<ul>
+<li>user(default root).</li>
+<li>password(default 123456) - Required to have a password, since Microsoft SQL will use default user pass. This is the password for MindsDB MySQL API.</li>
+<li>database - The name of the server that mindsdb will start.</li>
+<li>ssl(default true) -- Use SSL true/false.</li>
+<li>host(default 127.0.0.1).</li>
+<li>port(default 47335).</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> integrations['default_mssql'] -- This key specifies the integration type, in this case <code>default_mssql</code>. The required keys are:<ul>
+<li>user(default sa) - The Microsoft SQL Server user name.</li>
+<li>host(default 127.0.0.1) - Connect to the Microsoft SQL Server on the given host.</li>
+<li>password - The password of the Microsoft SQL Server user.</li>
+<li>type - Integration type(mariadb, postgresql, mysql, clickhouse, mongodb).</li>
+<li>port(default 1433) - The TCP/IP port number to use for the connection.</li>
+<li>publish(true|false) - Enable Microsoft SQL Server integration.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> log['level'] -- The logging configuration(optional):<ul>
+<li>console - "INFO", "DEBUG", "ERROR".</li>
+<li>file - Location of the log file.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> storage_dir -- The directory where mindsDB will store models and configuration.</li>
+</ul>
+<h3 id="mongodb-configuration">MongoDB Configuration</h3>
+<details class="success">
+   <summary> config.json example (click to expand)</summary> 
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;api&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;http&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47334&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;mysql&quot;</span><span class="p">:</span> <span class="p">{}</span>
+        <span class="nt">&quot;mongodb&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;47336&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;config_version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.4&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;debug&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;integrations&quot;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="nt">&quot;storage_dir&quot;</span><span class="p">:</span> <span class="s2">&quot;/mindsdb_storage&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+
+<p>All of the options that should be added to the <code>config.json</code> file are:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['http'] -- This key is used for starting the MindsDB HTTP API by providing:<ul>
+<li>host(default 127.0.0.1) - MindsDB server address.</li>
+<li>port(default 47334) - MindsDB server port.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> api['mongodb'] -- This key is used for starting MindsDB Mongo API by providing:<ul>
+<li>host(default 127.0.0.1) - MindsDB Mongo API address.</li>
+<li>port(default 47335) - MindsDB Mongo API port.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> api['mysql] -- This key is used for starting MindsDB MySQL API. Leave it empty if you work only with MongoDB.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> config_version(latest 1.4) - The version of config.json file. </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> debug(true|false)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> integrations[''] -- This key specifies the integration options with other SQL databases. Leave it empty if you work only with MongoDB. </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> log['level'] -- The logging configuration(optional):<ul>
+<li>console - "INFO", "DEBUG", "ERROR".</li>
+<li>file - Location of the log file.</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> storage_dir -- The directory where mindsDB will store models and configuration files.</li>
+</ul>
                 
               
               
@@ -1698,7 +1976,7 @@ After starting the server, you can run a <code>SELECT</code> query from your psq
 
   <h2 id="__comments">Comments</h2>
   <div id="disqus_thread"></div>
-  <script>var disqus_config=function(){this.page.url="https://docs.mindsdb.com/datasources/postgresql/",this.page.identifier="/datasources/postgresql/"};window.addEventListener("load",function(){var e=document,i=e.createElement("script");i.src="//docs-mindsdb-com.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)})</script>
+  <script>var disqus_config=function(){this.page.url="https://docs.mindsdb.com/datasources/configuration/",this.page.identifier="/datasources/configuration/"};window.addEventListener("load",function(){var e=document,i=e.createElement("script");i.src="//docs-mindsdb-com.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)})</script>
 
               
             </article>
