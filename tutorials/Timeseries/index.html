@@ -410,6 +410,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../../datasources/mongodb/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../datasources/remote/" class="md-nav__link">
         Remote URL
       </a>
@@ -562,6 +574,18 @@
     <li class="md-nav__item">
       <a href="../../model/mssql/" class="md-nav__link">
         Microsoft SQL Server
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/mongodb/" class="md-nav__link">
+        MongoDB
       </a>
     </li>
   
@@ -726,6 +750,18 @@
     <li class="md-nav__item">
       <a href="../../model/query/mssql/" class="md-nav__link">
         Microsoft SQL Server
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/query/mongodb/" class="md-nav__link">
+        MongoDB
       </a>
     </li>
   
@@ -1031,9 +1067,29 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-features" class="md-nav__link">
+    Experimental features
+  </a>
+  
+    <nav class="md-nav" aria-label="Experimental features">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#database-integration" class="md-nav__link">
     Database integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anomaly-detection" class="md-nav__link">
+    Anomaly detection
   </a>
   
 </li>
@@ -1560,9 +1616,29 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-features" class="md-nav__link">
+    Experimental features
+  </a>
+  
+    <nav class="md-nav" aria-label="Experimental features">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#database-integration" class="md-nav__link">
     Database integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anomaly-detection" class="md-nav__link">
+    Anomaly detection
   </a>
   
 </li>
@@ -1669,9 +1745,17 @@ Also note that, if you were to give the file:</p>
 2020-10-06, None        , A1
 </code></pre></div>
 <p>This wouldn't count as historical context, since you are grouping by the <code>store</code> column, so only rows where <code>store</code> is <code>A1</code> will be relevant historical context for predicting a row where the <code>store == A1</code></p>
+<h2 id="experimental-features">Experimental features</h2>
+<p>Some features are still very experimental and have many blindspots, so if you're interested in using them please contact us so we can help and get your feedback on how to improve.</p>
 <h3 id="database-integration">Database integration</h3>
-<p>There is an experimental feature, when you train mindsdb from a database, that auto-generates a query to select historical context, based on the query you used to source your training data.</p>
-<p>This can be enabled by passing <code>advanced_args={'use_database_history': True}</code> to the <code>predict</code> call (or to the <code>SELECT</code> call if operating from within a database). This is still very experimental and has many blindspots, so if you're interested in using this please contact us so we can help and get your feedback on how to improve this.</p>
+<p>When you train MindsDB from a database, it can auto-generate a query to select historical context, based on the query you used to source your training data.</p>
+<p>This can be enabled by passing <code>advanced_args={'use_database_history': True}</code> to the <code>predict</code> call (or to the <code>SELECT</code> call if operating from within a database). </p>
+<h3 id="anomaly-detection">Anomaly detection</h3>
+<p>We support anomaly detection for numerical time series. Our approach tags a data point as anomalous if it falls outside of the predicted range.</p>
+<p>Normally, MindsDB will try to generate bounds that are tight enough to be informative about your predictions. However, as this feature is  unsupervised (because it does not need labeled anomalies in the data), we offer two parameters to tune it for any specific use case:</p>
+<p><code>anomaly_error_rate</code> (Float, <code>0 &lt; x &lt; 1</code>): If smaller, it leads to wider bounds, thus less sensitivity to anomalies. If bigger, it leads to narrower bounds and increased sensitivity. By default, MindsDB will try to find an appropriate value.</p>
+<p><code>anomaly_cooldown</code> (Int): period during which no anomalies will be flagged, triggered after an initial anomaly is detected. Copes with potential predictor accuracy issues while it adjusts to the anomalous event.</p>
+<p>These parameters can be passed in the <code>advanced_args</code> dictionary when calling <code>predict</code>, and do not require predictor re-training.</p>
 <h3 id="database-example-from-sql">Database example (from SQL)</h3>
 <p>-- Pending, feel free to contribute some or ask us directly about this feature</p>
 <h3 id="database-example-from-code">Database example (from code)</h3>
